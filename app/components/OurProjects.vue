@@ -1,37 +1,40 @@
 <template>
   <section id="projects" class="projects">
 
-    <!-- HEADER stays inside the pinned container -->
-    <div class="projects__intro">
-      <h2 class="title-xl heading-on-dark">Our Projects</h2>
-      <p class="text-base text-on-dark projects__subtitle">
-        A selection of crafted spaces designed with intention, emotion, and precision.
-      </p>
-    </div>
+    <div class="container">
+      <!-- INTRO -->
+      <div class="section2__intro">
+        <h2 class="title-xl heading-on-dark">Our Projects</h2>
 
-    <!-- HORIZONTAL PIN -->
-    <div class="projects__pin">
-      <div class="projects__row">
-
-        <div
-          class="project-card"
-          v-for="(project, i) in projects"
-          :key="i"
-        >
-          <div
-            class="project-card__img"
-            :style="{ backgroundImage: `url(${project.image})` }"
-          ></div>
-
-          <div class="project-card__info">
-            <h3 class="project-card__title">{{ project.title }}</h3>
-            <p class="project-card__meta">{{ project.meta }}</p>
-          </div>
-        </div>
-
+        <p class="text-base text-on-dark section2__desc">
+          Every line, shadow, and volume is crafted with intention.
+          We create spaces that breathe, elevate, and reflect the lives within them.
+        </p>
       </div>
-    </div>
 
+        <!-- HORIZONTAL PIN -->
+        <div class="projects__pin">
+        <div class="projects__row">
+
+            <div
+            class="project-card"
+            v-for="(project, i) in projects"
+            :key="i"
+            >
+            <div
+                class="project-card__img"
+                :style="{ backgroundImage: `url(${project.image})` }"
+            ></div>
+
+            <div class="project-card__info">
+                <h3 class="project-card__title">{{ project.title }}</h3>
+                <p class="project-card__meta">{{ project.meta }}</p>
+            </div>
+            </div>
+
+        </div>
+        </div>
+    </div>
   </section>
 </template>
 
@@ -164,6 +167,27 @@ onMounted(() => {
 .project-card__meta {
   margin-top: 0.3rem;
   opacity: 0.75;
+}
+
+
+/* TEXT CONTENT */
+.section2__content {
+  position: relative;
+  z-index: 3;
+  max-width: 75%;
+}
+
+
+.section2__title {
+  margin-bottom: var(--space-sm);
+}
+
+.section2__desc {
+  max-width: 600px;
+  font-size: 1.05rem;
+  opacity: 0.75;
+  line-height: 1.55;
+  margin-top: 1rem;
 }
 
 /* MOBILE */
