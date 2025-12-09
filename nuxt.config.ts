@@ -5,5 +5,13 @@ export default defineNuxtConfig({
   css: [
     '@/assets/styles/fonts.css',
     '@/assets/styles/design-system.css',
-  ]
+  ],
+
+    ssr: false,       // Disable SSR completely
+    nitro: {
+      preset: 'vercel-static' // ensures static output for Vercel
+    },
+    app: {
+      baseURL: '/',  // Important for Vercel
+    },
 })
