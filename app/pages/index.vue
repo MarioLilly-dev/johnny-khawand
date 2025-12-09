@@ -2,4 +2,5 @@
     <!-- <HeroNew /> -->
     <Hero />
     <StudioVision />
+    <OurProjects />
 </template>

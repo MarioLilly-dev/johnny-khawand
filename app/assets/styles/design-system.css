@@ -13,7 +13,7 @@
   --color-dark-light: #A7A9AC;
 
   --color-white: #FFFFFF;
-  --color-bg-light: #FFFFFB;
+  --color-bg-light: #f6f6f6;
 
   /* SEMANTIC */
   --color-success: #4CAF50;
@@ -121,6 +121,7 @@ img {
   font-family: var(--font-title);
   font-weight: 600;
   color: var(--text-strong);
+  line-height: 0.95;
 }
 
 .title-xxl {
@@ -128,6 +129,7 @@ img {
   font-family: var(--font-title);
   font-weight: 600;
   color: var(--text-strong);
+  line-height: 0.95;
 }
 
 .title-xl {
@@ -135,6 +137,7 @@ img {
   font-family: var(--font-title);
   font-weight: 600;
   color: var(--text-strong);
+  line-height: 0.95;
 }
 
 .title-lg {
@@ -142,6 +145,7 @@ img {
   font-family: var(--font-title);
   font-weight: 500;
   color: var(--text-strong);
+  line-height: 0.95;
 }
 
 .text-md {
@@ -241,6 +245,7 @@ img {
 
 .section-title {
   margin-bottom: var(--space-lg);
+  line-height: 0.95;
 }
 
 
@@ -277,5 +282,6 @@ img {
 
   .title-xxl {
     font-size: 48px;
+    line-height: 0.95;
   }
 }
