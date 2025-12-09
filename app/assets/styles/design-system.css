@@ -1,0 +1,281 @@
+/* =========================================================
+   DESIGN SYSTEM — JOHNNY KHAWAND ARCHITECTS
+   ========================================================= */
+
+:root {
+  /* BRAND COLORS */
+  --color-primary: #0E96A5;
+  --color-primary-light: #4DBFCC;
+  --color-primary-xlight: #D7EFF3;
+
+  --color-dark: #3C3F44;
+  --color-dark-mid: #5A5E63;
+  --color-dark-light: #A7A9AC;
+
+  --color-white: #FFFFFF;
+  --color-bg-light: #FFFFFB;
+
+  /* SEMANTIC */
+  --color-success: #4CAF50;
+  --color-warning: #FFC107;
+  --color-error: #E53935;
+
+  /* TYPOGRAPHY */
+  --font-title: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --text-xxxl: 96px;
+  --text-xxl: 64px;
+  --text-xl: 48px;
+  --text-lg: 32px;
+  --text-md: 20px;
+  --text-base: 16px;
+  --text-sm: 14px;
+
+  /* TYPOGRAPHY COLORS (LIGHT THEME) */
+  --text-strong: var(--color-dark);
+  --text-regular: var(--color-dark-mid);
+  --text-light: var(--color-dark-light);
+
+  /* SPACING SCALE */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+  --space-xxl: 96px;
+
+  /* RADII */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xlg: 50px;
+
+  /* SHADOWS */
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 6px 20px rgba(0, 0, 0, 0.12);
+
+  /* BLOCKS */
+  --container-max: 1200px;
+
+  /* BUTTONS */
+  --btn-padding: 12px 24px;
+}
+
+/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+.dark {
+  --color-bg-light: #1A1D21;
+
+  --text-strong: #FFFFFF;
+  --text-regular: #D0D3D6;
+  --text-light: #9FA3A7;
+
+  --shadow-soft: 0 4px 16px rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================================
+   GLOBAL BASE STYLES
+   ========================================================= */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg-light);
+  color: var(--text-regular);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+/* TYPOGRAPHY VARIANTS FOR DARK BACKGROUNDS */
+.heading-on-dark {
+  color: var(--color-white) !important;
+}
+
+.text-on-dark {
+  color: var(--color-white) !important;
+}
+
+
+.title-xxxl {
+  font-size: var(--text-xxxl);
+  font-family: var(--font-title);
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.title-xxl {
+  font-size: var(--text-xxl);
+  font-family: var(--font-title);
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.title-xl {
+  font-size: var(--text-xl);
+  font-family: var(--font-title);
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.title-lg {
+  font-size: var(--text-lg);
+  font-family: var(--font-title);
+  font-weight: 500;
+  color: var(--text-strong);
+}
+
+.text-md {
+  font-size: var(--text-md);
+  color: var(--text-regular);
+}
+
+.text-base {
+  font-size: var(--text-base);
+  color: var(--text-regular);
+}
+
+.text-light {
+  font-size: var(--text-base);
+  color: var(--text-light);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn {
+  padding: var(--btn-padding);
+  border-radius: var(--radius-xlg);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+.btn-primary:hover {
+  background: var(--color-primary-light);
+}
+
+.btn-outline {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+}
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card {
+  background: var(--color-white);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+.dark .card {
+  background: #23272B;
+}
+
+
+/* =========================================================
+   CONTAINERS
+   ========================================================= */
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section {
+  padding: var(--space-xxl) 0;
+}
+
+.section-dark {
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+
+.section-light {
+  background: var(--color-bg-light);
+}
+
+.section-title {
+  margin-bottom: var(--space-lg);
+}
+
+
+/* =========================================================
+   UTILITIES
+   ========================================================= */
+
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .title-xxl {
+    font-size: 48px;
+  }
+}
