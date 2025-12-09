@@ -7,11 +7,11 @@ export default defineNuxtConfig({
     '@/assets/styles/design-system.css',
   ],
 
-    ssr: false,       // Disable SSR completely
-    nitro: {
-      preset: 'vercel-static' // ensures static output for Vercel
-    },
-    app: {
-      baseURL: '/',  // Important for Vercel
-    },
+  ssr: false,                // SSG mode
+  nitro: {
+    preset: 'vercel-static', // Important for Vercel hosting
+  },
+  app: {
+    baseURL: '/',            // Keep root
+  }
 })
